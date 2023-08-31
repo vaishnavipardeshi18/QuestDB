@@ -1,0 +1,39 @@
+Dear Team,
+
+I am Vaishnavi Pardeshi working as a security researcher and I found a bug on your site, report of the bug is as follows :
+
+Vulnerability name : 
+
+      Signup Page OAuth Misconfiguration Giving Access To Created Account Leads to Account Takeover. 
+
+(Critical, Please Fix This ASAP!)
+
+ (https://questdb.eu.auth0.com/u/signup?state=hKFo2SB5b3RjU3ZhczFQMFlGY1lGQXFjdEwwOGdnWjBHbHBwRqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIDdvS1Q0Ul9uaHpmME9zZ3lUQWdpV1MyUDVaci1Gczlko2NpZNkgcGZWdmVCRTJYTDZmeTRHR3Z2N1N1N2lSV3RiWnNmbmQ)
+
+Description:
+OAuth is a functionality used by a user for easy sign up or login on your domain. In this vulnerability, an attacker can easily control the victim's account, if the victim uses OAuth functionality.
+
+STEPS TO REPRODUCE:
+ATTACKER PHASE :-
+
+Go to https://questdb.eu.auth0.com/u/signup?state=hKFo2SB5b3RjU3ZhczFQMFlGY1lGQXFjdEwwOGdnWjBHbHBwRqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIDdvS1Q0Ul9uaHpmME9zZ3lUQWdpV1MyUDVaci1Gczlko2NpZNkgcGZWdmVCRTJYTDZmeTRHR3Z2N1N1N2lSV3RiWnNmbmQ And go to signup.
+Make an account with the victim's email address.
+Now you have access to the victim's account through email ID and password.
+VICTIM COMES :-
+The victim will create an account through Google OAuth functionality.
+Thus, the victim is not required to set a password.
+EXPLOIT:-
+
+You can access the victim's account through the password you set in the attacker's  phase.
+So, you can use the victim's account whenever you want!
+
+POC:
+Video Attached
+
+Impact:
+1)  An attacker can take over the account of the victim.
+2)  If the victim makes any changes to his account(e.g: updates the name etc.) the same will be reflected in the attacker's account.
+
+Kind Regards,
+Vaishnavi Pardeshi
+Security Researcher.
